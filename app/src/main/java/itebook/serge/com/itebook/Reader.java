@@ -142,7 +142,8 @@ public class Reader extends Activity implements OnItemClickListener {
 			booklist.clear();
 			firstload = 1;
 	 }
-	 
+
+    //Displays buttons
 	 private void Btnfooter()
 	    {
 	        int val = Integer.parseInt(book.getResults().getTotal()) % booklist.size();
