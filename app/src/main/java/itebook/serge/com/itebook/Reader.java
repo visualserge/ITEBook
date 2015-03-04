@@ -134,7 +134,8 @@ public class Reader extends Activity implements OnItemClickListener {
 					}
 				}
 	 }
-	 
+
+    //Clear all the books
 	 private void ClearAll(){
 		    ll = (LinearLayout)findViewById(R.id.btnLay);        
 	        ll.removeAllViews();
