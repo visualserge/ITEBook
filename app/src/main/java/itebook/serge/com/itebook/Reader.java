@@ -351,14 +351,14 @@ public class Reader extends Activity implements OnItemClickListener {
                 Toast.makeText(Reader.this,
         				"Page "+ _page +" of "+ noOfBtns
         				, Toast.LENGTH_LONG).show();
-            	Log.d("Request query execution time (seconds)", book.getResults().getTime());
+            	Log.d("Execution time(seconds)", book.getResults().getTime());
             }
             else{
             	Toast.makeText(Reader.this,
         				"eBook not found!"
         				, Toast.LENGTH_LONG).show();
             	//Log the search results if any, such as errors etc.
-                Log.d("Error code/description (Note: request success code = 0)", error);    
+                Log.d("Error code", error);
             }
          
     }
