@@ -100,7 +100,7 @@ public class Reader extends Activity implements OnItemClickListener {
 				}
 			});
 
-			CheckBtnBackGroud(0);
+			CheckBtnBackGround(0);
 		}
 	}
 	
@@ -184,7 +184,7 @@ public class Reader extends Activity implements OnItemClickListener {
 	    				String urlEncoded = Uri.encode("http://it-ebooks-api.info/v1/search/"+value.replace("#", "%23")+"/page/"+ String.valueOf(j+1), ALLOWED_URI_CHARS);
 	    			    new MakeHttpRequest().execute(urlEncoded); 
 	    			    
-	                    CheckBtnBackGroud(j);
+	                    CheckBtnBackGround(j);
 	                  }
 	               }
 	            });
@@ -195,7 +195,7 @@ public class Reader extends Activity implements OnItemClickListener {
 	     * Method for Checking Button Backgrounds
 	     */
 	    @SuppressWarnings("deprecation")
-		private void CheckBtnBackGroud(int index)
+		private void CheckBtnBackGround(int index)
 	    {
 	        //title.setText("Page "+(index+1)+" of "+noOfBtns);
 	    	if(resultsFound > 0){
@@ -305,7 +305,7 @@ public class Reader extends Activity implements OnItemClickListener {
 		   	              bookadapter = new BookAdapter(booklist);
 		   	              
 		   	              total += booklist.size();
-		   	              publishProgress(""+ (int) ((total*100) / arr.length()));
+		   	              publishProgress(""+ ((total*100) / arr.length()));
 		   	              Thread.sleep(10);
 		   	            }
 	                  }   
@@ -339,7 +339,7 @@ public class Reader extends Activity implements OnItemClickListener {
             if(resultsFound > 0){
                 if(firstload == 1){
                	    Btnfooter();
-                    CheckBtnBackGroud(0);
+                    CheckBtnBackGround(0);
 
                     //By default, if there is a result found, set page into 1 first.
                     _page = "1";
