@@ -1,9 +1,7 @@
 package itebook.serge.com.itebook;
 
 import android.app.ActionBar.LayoutParams;
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.ProgressDialog;
+import android.app.*;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -19,12 +17,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
