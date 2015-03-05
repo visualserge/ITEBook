@@ -365,20 +365,20 @@ public class Reader extends Activity implements OnItemClickListener {
 	public final boolean isInternetOn() {
         
         // get Connectivity Manager object to check connection
-        ConnectivityManager connec = (ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
+        ConnectivityManager connection = (ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
          
            // Check for network connections
-            if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
-                 connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                 connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                 connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
+            if ( connection.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
+                 connection.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
+                 connection.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
+                 connection.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
                 
                 // if connected with Internet
                 return true;
                  
-            } else if ( 
-              connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.DISCONNECTED ||
-              connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.DISCONNECTED  ) {
+            } else if (
+              connection.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.DISCONNECTED ||
+              connection.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.DISCONNECTED  ) {
                
                 Toast.makeText(Reader.this, " Not Connected to internet. ", Toast.LENGTH_LONG).show();
                 return false;
