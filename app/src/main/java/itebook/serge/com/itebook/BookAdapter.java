@@ -1,11 +1,7 @@
 package itebook.serge.com.itebook;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.*;
+import android.widget.*;
 
 import com.squareup.picasso.Picasso;
 
