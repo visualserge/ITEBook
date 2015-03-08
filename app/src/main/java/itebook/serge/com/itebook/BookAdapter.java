@@ -43,7 +43,7 @@ public class BookAdapter extends BaseAdapter {
 			convertView = inflater.inflate(R.layout.books, parent, false);
 		}
 		
-		Book book = this.books.get(position);
+		Book book = (Book)getItem(position);
 
 		ImageView image = (ImageView)convertView.findViewById(R.id.icon);
 	    Picasso.with(parent.getContext()).load(book.getImage()).placeholder(R.drawable.loading).into(image);
